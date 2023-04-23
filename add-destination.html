@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- index.html  21 Nov 2019 03:44:50 GMT -->
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>ERP - Dashboard</title>
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="assets/css/app.min.css">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <!-- Custom style CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script type="text/javascript" src='https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js'></script>
+
+<!-- ck editor -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/ck/css/froala_editor.css">
+  <link rel="stylesheet" href="assets/ck/css/froala_style.css">
+  <link rel="stylesheet" href="assets/ck/css/plugins/code_view.css">
+  <link rel="stylesheet" href="assets/ck/css/plugins/colors.css">
+  <link rel="stylesheet" href="assets/ck/css/plugins/emoticons.css">
+  <link rel="stylesheet" href="assets/ck/css/plugins/image_manager.css">
+  <link rel="stylesheet" href="assets/ck/css/plugins/image.css">
+  <link rel="stylesheet" href="assets/ck/css/plugins/line_breaker.css">
+  <link rel="stylesheet" href="assets/ck/css/plugins/table.css">
+  <link rel="stylesheet" href="assets/ck/css/plugins/char_counter.css">
+  <link rel="stylesheet" href="assets/ck/css/plugins/video.css">
+  <link rel="stylesheet" href="assets/ck/css/plugins/fullscreen.css">
+  <link rel="stylesheet" href="assets/ck/css/plugins/file.css">
+  <link rel="stylesheet" href="assets/ck/css/plugins/quick_insert.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
+  <style>
+    .main-sidebar .sidebar-menu li a {
+    height: 30px !important;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 12px;
+  }
+  .main-sidebar i {
+    font-size: 14px !important;
+  }
+     thead {
+    background: #4F46E5;
+  }
+  th {
+    color: #fff !important;
+  }
+  ::placeholder {
+      font-size: 13px;
+    }
+    .boxCard input[type] {
+  padding: 0px 8px 0px !important;
+}
+.boxCard ::placeholder {
+  font-size: 12px;
+}
+.boxCard label {
+  font-weight: 700;
+}
+.plus {
+  margin-top: 230px;
+  position: relative;
+  margin-left: 79px;
+  align-items: center;
+}
+.arrow {
+  margin-top: 60px;
+  position: relative;
+  margin-left: 100px;
+  align-items: center;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="loader"></div>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar sticky">
+        <div class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                                    collapse-btn"> <i data-feather="align-justify"></i></a></li>
+            <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                <i data-feather="maximize"></i>
+              </a></li>
+            <li>
+              <form class="form-inline mr-auto">
+                <div class="search-element">
+                  <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="200">
+                  <button class="btn" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </form>
+            </li>
+          </ul>
+        </div>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
+              class="nav-link nav-link-lg message-toggle"><i data-feather="mail"></i>
+              <span class="badge headerBadge1">
+                6 </span> </a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+              <div class="dropdown-header">
+                Messages
+                <div class="float-right">
+                  <a href="#">Mark All As Read</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-message">
+                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar
+                                            text-white"> <img alt="image" src="assets/img/users/user-1.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">John
+                      Deo</span>
+                    <span class="time messege-text">Please check your mail !!</span>
+                    <span class="time">2 Min Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="assets/img/users/user-2.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
+                      Smith</span> <span class="time messege-text">Request for leave
+                      application</span>
+                    <span class="time">5 Min Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="assets/img/users/user-5.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Jacob
+                      Ryan</span> <span class="time messege-text">Your payment invoice is
+                      generated.</span> <span class="time">12 Min Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="assets/img/users/user-4.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Lina
+                      Smith</span> <span class="time messege-text">hii John, I have upload
+                      doc
+                      related to task.</span> <span class="time">30
+                      Min Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="assets/img/users/user-3.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Jalpa
+                      Joshi</span> <span class="time messege-text">Please do as specify.
+                      Let me
+                      know if you have any query.</span> <span class="time">1
+                      Days Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="assets/img/users/user-2.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
+                      Smith</span> <span class="time messege-text">Client Requirements</span>
+                    <span class="time">2 Days Ago</span>
+                  </span>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
+              class="nav-link notification-toggle nav-link-lg"><i data-feather="bell" class="bell"></i>
+            </a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+              <div class="dropdown-header">
+                Notifications
+                <div class="float-right">
+                  <a href="#">Mark All As Read</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="#" class="dropdown-item dropdown-item-unread"> <span
+                    class="dropdown-item-icon bg-primary text-white"> <i class="fas
+                                                fa-code"></i>
+                  </span> <span class="dropdown-item-desc"> Template update is
+                    available now! <span class="time">2 Min
+                      Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-info text-white"> <i class="far
+                                                fa-user"></i>
+                  </span> <span class="dropdown-item-desc"> <b>You</b> and <b>Dedik
+                      Sugiharto</b> are now friends <span class="time">10 Hours
+                      Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-success text-white"> <i
+                      class="fas
+                                                fa-check"></i>
+                  </span> <span class="dropdown-item-desc"> <b>Kusnaedi</b> has
+                    moved task <b>Fix bug header</b> to <b>Done</b> <span class="time">12
+                      Hours
+                      Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-danger text-white"> <i
+                      class="fas fa-exclamation-triangle"></i>
+                  </span> <span class="dropdown-item-desc"> Low disk space. Let's
+                    clean it! <span class="time">17 Hours Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-info text-white"> <i class="fas
+                                                fa-bell"></i>
+                  </span> <span class="dropdown-item-desc"> Welcome to Otika
+                    template! <span class="time">Yesterday</span>
+                  </span>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown"
+            class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="assets/img/usa.png"
+              class=""> <span class="d-sm-none d-lg-inline-block"></span></a>
+          <div class="dropdown-menu dropdown-menu-right" style="width: 50px;">
+            
+             <a href="timeline.html" class="dropdown-item"> <img src="assets/img/china.png" alt="" width="33">
+              Chinese
+            </a> 
+            <a href="#" class="dropdown-item "> <img src="assets/img/usa.png" alt="" width="33">
+              English
+            </a>
+            
+          </div>
+        </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown"
+              class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="assets/img/user.png"
+                class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
+            <div class="dropdown-menu dropdown-menu-right pullDown">
+              <div class="dropdown-title">Hello Sarah Smith</div>
+              <a href="profile.html" class="dropdown-item has-icon"> <i class="far
+                                        fa-user"></i> Profile
+              </a> <a href="timeline.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i>
+                Activities
+              </a> <a href="#" class="dropdown-item has-icon"> <i class="fas fa-cog"></i>
+                Settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="auth-login.html" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+            <div class="sidebar-brand">
+              <!-- <a href="local.html"><span
+                  class="logo-name btn btn-primary"> <i class="fa-solid fa-plus mt-1"></i> <strong style="font-size: 14px">Create New Order</strong></span>
+              </a> -->
+            </div>
+            <ul class="sidebar-menu">
+              <li class="dropdown active">
+                <a href="index.html" class="nav-link"><i data-feather="home"></i><span>Dashboard</span></a>
+              </li>
+              
+              <li class="menu-header">Orders</li>
+              <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown dropdown"><i class="fa-solid fa-lightbulb" style="font-size: 20px"></i><span>Local Entertainment</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="local.html">Create New Order</a></li>
+                  <li><a class="nav-link" href="local-filter.html">Manage Orders</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown"><i class="fa-solid fa-car" style="font-size: 20px"></i><span>Car Service</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="service.html">Create New Order</a></li>
+                  <li><a class="nav-link" href="service-filter.html">Manage Orders</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown"><i class="fa-solid fa-location-dot" style="font-size: 20px"></i><span>Tours</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="tour.html">Create New Order</a></li>
+                  <li><a class="nav-link" href="filter-tour.html">Manage Orders</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown"><i class="fa-solid fa-handshake" style="font-size: 20px"></i><span>Other</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="other.html">Create New Order</a></li>
+                  <li><a class="nav-link" href="filter-other.html">Manage Orders</a></li>
+                </ul>
+              </li>
+              
+              <li class="menu-header">Orders Request</li>
+              <li class="dropdown">
+                <a href="website-request.html" class="nav-link"><i class="fa-solid fa-globe" style="font-size: 20px"></i><span>Website Request</span></a>
+              </li>
+              
+        
+              <li class="menu-header">Add & Manage</li>
+              <li class="dropdown">
+                <a href="destination.html" class="nav-link"><i class="fa-solid fa-location-dot" style="font-size: 20px"></i><span>Destination</span></a>
+              </li>
+              <li class="dropdown">
+                <a href="all-service.html" class="nav-link"><i class="fa-brands fa-servicestack" style="font-size: 20px"></i><span>Service</span></a>
+              </li>
+              <li class="dropdown">
+                <a href="all-supplier.html" class="nav-link"><i class="fa-solid fa-truck-field-un" style="font-size: 20px"></i><span>Supplier</span></a>
+              </li>
+              <li class="dropdown">
+                <a href="all-provider.html" class="nav-link"><i class="fa-solid fa-car" style="font-size: 20px"></i><span>Provider</span></a>
+              </li>
+              <li class="dropdown">
+                <a href="all-client.html" class="nav-link"><i class="fa-solid fa-user" style="font-size: 20px"></i><span>Client</span></a>
+              </li>
+        
+              <li class="dropdown mt-5">
+                <a href="#" class="nav-link"><i class="fa-solid fa-users" style="font-size: 20px"></i><span>Staff admin</span></a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="nav-link"><i class="fa-solid fa-gear" style="font-size: 20px"></i><span>Setting</span></a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="nav-link"><i class="fa-solid fa-right-from-bracket" style="font-size: 20px"></i><span>Logout</span></a>
+              </li>
+              <!-- <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="users"></i><span>Users</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="{{url('admin/index')}}">All Users</a></li>
+                  <li><a class="nav-link" href="{{url('admin/create')}}">Add User</a></li>
+                </ul>
+              </li> -->
+              
+            </ul>
+          </aside>
+      </div>
+      <!-- Main Content -->
+      <div class="main-content">
+
+        <section class="section">
+    
+            <div class="w-100">
+              <div class="card-header justify-content-between row mx-0 border-0" style="background: none">
+                <h4 style="font-size: 24px; font-weight:700;color:#000;">Destination</h4>
+                <a href="#" class="btn btn-icon icon-left btn-primary">Save</a>
+              </div>
+            
+      
+            <form action="">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="">Country</label> 
+                  <input type="text" placeholder="Enter Country" class="form-control" style="background-color: #EAEAEA;
+                  ">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="">Destination</label> 
+                  <input type="text" placeholder="Enter Destination" class="form-control" style="background-color: #EAEAEA;
+                  ">
+                </div>
+                
+              </div>
+            </form>
+          </div>
+          
+        </section>
+        
+          <div class="settingSidebar">
+            <a href="javascript:void(0)" class="settingPanelToggle"> <i class="fa fa-spin fa-cog"></i>
+            </a>
+            <div class="settingSidebar-body ps-container ps-theme-default">
+              <div class=" fade show active">
+                <div class="setting-panel-header">Setting Panel
+                </div>
+                <div class="p-15 border-bottom">
+                  <h6 class="font-medium m-b-10">Select Layout</h6>
+                  <div class="selectgroup layout-color w-50">
+                    <label class="selectgroup-item">
+                      <input type="radio" name="value" value="1" class="selectgroup-input-radio select-layout" checked>
+                      <span class="selectgroup-button">Light</span>
+                    </label>
+                    <label class="selectgroup-item">
+                      <input type="radio" name="value" value="2" class="selectgroup-input-radio select-layout">
+                      <span class="selectgroup-button">Dark</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="p-15 border-bottom">
+                  <h6 class="font-medium m-b-10">Sidebar Color</h6>
+                  <div class="selectgroup selectgroup-pills sidebar-color">
+                    <label class="selectgroup-item">
+                      <input type="radio" name="icon-input" value="1" class="selectgroup-input select-sidebar">
+                      <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
+                        data-original-title="Light Sidebar"><i class="fas fa-sun"></i></span>
+                    </label>
+                    <label class="selectgroup-item">
+                      <input type="radio" name="icon-input" value="2" class="selectgroup-input select-sidebar" checked>
+                      <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
+                        data-original-title="Dark Sidebar"><i class="fas fa-moon"></i></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="p-15 border-bottom">
+                  <h6 class="font-medium m-b-10">Color Theme</h6>
+                  <div class="theme-setting-options">
+                    <ul class="choose-theme list-unstyled mb-0">
+                      <li title="white" class="active">
+                        <div class="white"></div>
+                      </li>
+                      <li title="cyan">
+                        <div class="cyan"></div>
+                      </li>
+                      <li title="black">
+                        <div class="black"></div>
+                      </li>
+                      <li title="purple">
+                        <div class="purple"></div>
+                      </li>
+                      <li title="orange">
+                        <div class="orange"></div>
+                      </li>
+                      <li title="green">
+                        <div class="green"></div>
+                      </li>
+                      <li title="red">
+                        <div class="red"></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="p-15 border-bottom">
+                  <div class="theme-setting-options">
+                    <label class="m-b-0">
+                      <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                        id="mini_sidebar_setting">
+                      <span class="custom-switch-indicator"></span>
+                      <span class="control-label p-l-10">Mini Sidebar</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="p-15 border-bottom">
+                  <div class="theme-setting-options">
+                    <label class="m-b-0">
+                      <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                        id="sticky_header_setting">
+                      <span class="custom-switch-indicator"></span>
+                      <span class="control-label p-l-10">Sticky Header</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="mt-4 mb-4 p-3 align-center rt-sidebar-last-ele">
+                  <a href="#" class="btn btn-icon icon-left btn-primary btn-restore-theme">
+                    <i class="fas fa-undo"></i> Restore Default
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        <div class="settingSidebar">
+          <a href="javascript:void(0)" class="settingPanelToggle"> <i class="fa fa-spin fa-cog"></i>
+          </a>
+          <div class="settingSidebar-body ps-container ps-theme-default">
+            <div class=" fade show active">
+              <div class="setting-panel-header">Setting Panel
+              </div>
+              <div class="p-15 border-bottom">
+                <h6 class="font-medium m-b-10">Select Layout</h6>
+                <div class="selectgroup layout-color w-50">
+                  <label class="selectgroup-item">
+                    <input type="radio" name="value" value="1" class="selectgroup-input-radio select-layout" checked>
+                    <span class="selectgroup-button">Light</span>
+                  </label>
+                  <label class="selectgroup-item">
+                    <input type="radio" name="value" value="2" class="selectgroup-input-radio select-layout">
+                    <span class="selectgroup-button">Dark</span>
+                  </label>
+                </div>
+              </div>
+              <div class="p-15 border-bottom">
+                <h6 class="font-medium m-b-10">Sidebar Color</h6>
+                <div class="selectgroup selectgroup-pills sidebar-color">
+                  <label class="selectgroup-item">
+                    <input type="radio" name="icon-input" value="1" class="selectgroup-input select-sidebar">
+                    <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
+                      data-original-title="Light Sidebar"><i class="fas fa-sun"></i></span>
+                  </label>
+                  <label class="selectgroup-item">
+                    <input type="radio" name="icon-input" value="2" class="selectgroup-input select-sidebar" checked>
+                    <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
+                      data-original-title="Dark Sidebar"><i class="fas fa-moon"></i></span>
+                  </label>
+                </div>
+              </div>
+              <div class="p-15 border-bottom">
+                <h6 class="font-medium m-b-10">Color Theme</h6>
+                <div class="theme-setting-options">
+                  <ul class="choose-theme list-unstyled mb-0">
+                    <li title="white" class="active">
+                      <div class="white"></div>
+                    </li>
+                    <li title="cyan">
+                      <div class="cyan"></div>
+                    </li>
+                    <li title="black">
+                      <div class="black"></div>
+                    </li>
+                    <li title="purple">
+                      <div class="purple"></div>
+                    </li>
+                    <li title="orange">
+                      <div class="orange"></div>
+                    </li>
+                    <li title="green">
+                      <div class="green"></div>
+                    </li>
+                    <li title="red">
+                      <div class="red"></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="p-15 border-bottom">
+                <div class="theme-setting-options">
+                  <label class="m-b-0">
+                    <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                      id="mini_sidebar_setting">
+                    <span class="custom-switch-indicator"></span>
+                    <span class="control-label p-l-10">Mini Sidebar</span>
+                  </label>
+                </div>
+              </div>
+              <div class="p-15 border-bottom">
+                <div class="theme-setting-options">
+                  <label class="m-b-0">
+                    <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                      id="sticky_header_setting">
+                    <span class="custom-switch-indicator"></span>
+                    <span class="control-label p-l-10">Sticky Header</span>
+                  </label>
+                </div>
+              </div>
+              <div class="mt-4 mb-4 p-3 align-center rt-sidebar-last-ele">
+                <a href="#" class="btn btn-icon icon-left btn-primary btn-restore-theme">
+                  <i class="fas fa-undo"></i> Restore Default
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <!-- General JS Scripts -->
+  <script src="assets/js/app.min.js"></script>
+  <!-- JS Libraies -->
+  <script src="assets/bundles/apexcharts/apexcharts.min.js"></script>
+  <!-- Page Specific JS File -->
+  <script src="assets/js/page/index.js"></script>
+  <!-- Template JS File -->
+  <script src="assets/js/scripts.js"></script>
+  <!-- Custom JS File -->
+  <script src="assets/js/custom.js"></script>
+
+  <!-- ck editor -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
+
+  <script type="text/javascript" src="assets/ck/js/froala_editor.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/align.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/char_counter.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/code_beautifier.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/code_view.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/colors.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/draggable.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/emoticons.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/entities.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/file.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/font_size.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/font_family.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/fullscreen.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/image.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/image_manager.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/line_breaker.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/inline_style.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/link.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/lists.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/paragraph_format.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/paragraph_style.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/quick_insert.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/quote.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/table.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/save.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/url.min.js"></script>
+  <script type="text/javascript" src="assets/ck/js/plugins/video.min.js"></script>
+
+  <script>
+    const editor = new FroalaEditor("#edit")
+  </script>
+
+
+</body>
+
+
+<!-- index.html  21 Nov 2019 03:47:04 GMT -->
+</html>

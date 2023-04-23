@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- index.html  21 Nov 2019 03:44:50 GMT -->
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>ERP - Dashboard</title>
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="assets/css/app.min.css">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <!-- Custom style CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script type="text/javascript" src='https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js'></script>
+
+  <style>
+    .main-sidebar .sidebar-menu li a {
+    height: 30px !important;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 12px;
+  }
+  .main-sidebar i {
+    font-size: 14px !important;
+  }
+     thead {
+    background: #4F46E5;
+  }
+  th {
+    color: #fff !important;
+  }
+  ::placeholder {
+      font-size: 13px;
+    }
+    .boxCard input[type] {
+  padding: 0px 8px 0px !important;
+}
+.boxCard ::placeholder {
+  font-size: 12px;
+}
+.boxCard label {
+  font-weight: 700;
+}
+.plus {
+  margin-top: 230px;
+  position: relative;
+  margin-left: 79px;
+  align-items: center;
+}
+.arrow {
+  margin-top: 60px;
+  position: relative;
+  margin-left: 100px;
+  align-items: center;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="loader"></div>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar sticky">
+        <div class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                                    collapse-btn"> <i data-feather="align-justify"></i></a></li>
+            <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                <i data-feather="maximize"></i>
+              </a></li>
+            <li>
+              <form class="form-inline mr-auto">
+                <div class="search-element">
+                  <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="200">
+                  <button class="btn" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </form>
+            </li>
+          </ul>
+        </div>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
+              class="nav-link nav-link-lg message-toggle"><i data-feather="mail"></i>
+              <span class="badge headerBadge1">
+                6 </span> </a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+              <div class="dropdown-header">
+                Messages
+                <div class="float-right">
+                  <a href="#">Mark All As Read</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-message">
+                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar
+                                            text-white"> <img alt="image" src="assets/img/users/user-1.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">John
+                      Deo</span>
+                    <span class="time messege-text">Please check your mail !!</span>
+                    <span class="time">2 Min Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="assets/img/users/user-2.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
+                      Smith</span> <span class="time messege-text">Request for leave
+                      application</span>
+                    <span class="time">5 Min Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="assets/img/users/user-5.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Jacob
+                      Ryan</span> <span class="time messege-text">Your payment invoice is
+                      generated.</span> <span class="time">12 Min Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="assets/img/users/user-4.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Lina
+                      Smith</span> <span class="time messege-text">hii John, I have upload
+                      doc
+                      related to task.</span> <span class="time">30
+                      Min Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="assets/img/users/user-3.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Jalpa
+                      Joshi</span> <span class="time messege-text">Please do as specify.
+                      Let me
+                      know if you have any query.</span> <span class="time">1
+                      Days Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="assets/img/users/user-2.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
+                      Smith</span> <span class="time messege-text">Client Requirements</span>
+                    <span class="time">2 Days Ago</span>
+                  </span>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
+              class="nav-link notification-toggle nav-link-lg"><i data-feather="bell" class="bell"></i>
+            </a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+              <div class="dropdown-header">
+                Notifications
+                <div class="float-right">
+                  <a href="#">Mark All As Read</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="#" class="dropdown-item dropdown-item-unread"> <span
+                    class="dropdown-item-icon bg-primary text-white"> <i class="fas
+                                                fa-code"></i>
+                  </span> <span class="dropdown-item-desc"> Template update is
+                    available now! <span class="time">2 Min
+                      Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-info text-white"> <i class="far
+                                                fa-user"></i>
+                  </span> <span class="dropdown-item-desc"> <b>You</b> and <b>Dedik
+                      Sugiharto</b> are now friends <span class="time">10 Hours
+                      Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-success text-white"> <i
+                      class="fas
+                                                fa-check"></i>
+                  </span> <span class="dropdown-item-desc"> <b>Kusnaedi</b> has
+                    moved task <b>Fix bug header</b> to <b>Done</b> <span class="time">12
+                      Hours
+                      Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-danger text-white"> <i
+                      class="fas fa-exclamation-triangle"></i>
+                  </span> <span class="dropdown-item-desc"> Low disk space. Let's
+                    clean it! <span class="time">17 Hours Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-info text-white"> <i class="fas
+                                                fa-bell"></i>
+                  </span> <span class="dropdown-item-desc"> Welcome to Otika
+                    template! <span class="time">Yesterday</span>
+                  </span>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown"
+            class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="assets/img/usa.png"
+              class=""> <span class="d-sm-none d-lg-inline-block"></span></a>
+          <div class="dropdown-menu dropdown-menu-right" style="width: 50px;">
+            
+             <a href="timeline.html" class="dropdown-item"> <img src="assets/img/china.png" alt="" width="33">
+              Chinese
+            </a> 
+            <a href="#" class="dropdown-item "> <img src="assets/img/usa.png" alt="" width="33">
+              English
+            </a>
+            
+          </div>
+        </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown"
+              class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="assets/img/user.png"
+                class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
+            <div class="dropdown-menu dropdown-menu-right pullDown">
+              <div class="dropdown-title">Hello Sarah Smith</div>
+              <a href="profile.html" class="dropdown-item has-icon"> <i class="far
+                                        fa-user"></i> Profile
+              </a> <a href="timeline.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i>
+                Activities
+              </a> <a href="#" class="dropdown-item has-icon"> <i class="fas fa-cog"></i>
+                Settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="auth-login.html" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+            <div class="sidebar-brand">
+              <!-- <a href="local.html"><span
+                  class="logo-name btn btn-primary"> <i class="fa-solid fa-plus mt-1"></i> <strong style="font-size: 14px">Create New Order</strong></span>
+              </a> -->
+            </div>
+            <ul class="sidebar-menu">
+              <li class="dropdown active">
+                <a href="index.html" class="nav-link"><i data-feather="home"></i><span>Dashboard</span></a>
+              </li>
+              
+              <li class="menu-header">Orders</li>
+              <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown dropdown"><i class="fa-solid fa-lightbulb" style="font-size: 20px"></i><span>Local Entertainment</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="local.html">Create New Order</a></li>
+                  <li><a class="nav-link" href="local-filter.html">Manage Orders</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown"><i class="fa-solid fa-car" style="font-size: 20px"></i><span>Car Service</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="service.html">Create New Order</a></li>
+                  <li><a class="nav-link" href="service-filter.html">Manage Orders</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown"><i class="fa-solid fa-location-dot" style="font-size: 20px"></i><span>Tours</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="tour.html">Create New Order</a></li>
+                  <li><a class="nav-link" href="filter-tour.html">Manage Orders</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown"><i class="fa-solid fa-handshake" style="font-size: 20px"></i><span>Other</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="other.html">Create New Order</a></li>
+                  <li><a class="nav-link" href="filter-other.html">Manage Orders</a></li>
+                </ul>
+              </li>
+              
+              <li class="menu-header">Orders Request</li>
+              <li class="dropdown">
+                <a href="website-request.html" class="nav-link"><i class="fa-solid fa-globe" style="font-size: 20px"></i><span>Website Request</span></a>
+              </li>
+              
+        
+              <li class="menu-header">Add & Manage</li>
+              <li class="dropdown">
+                <a href="destination.html" class="nav-link"><i class="fa-solid fa-location-dot" style="font-size: 20px"></i><span>Destination</span></a>
+              </li>
+              <li class="dropdown">
+                <a href="all-service.html" class="nav-link"><i class="fa-brands fa-servicestack" style="font-size: 20px"></i><span>Service</span></a>
+              </li>
+              <li class="dropdown">
+                <a href="all-supplier.html" class="nav-link"><i class="fa-solid fa-truck-field-un" style="font-size: 20px"></i><span>Supplier</span></a>
+              </li>
+              <li class="dropdown">
+                <a href="all-provider.html" class="nav-link"><i class="fa-solid fa-car" style="font-size: 20px"></i><span>Provider</span></a>
+              </li>
+              <li class="dropdown">
+                <a href="all-client.html" class="nav-link"><i class="fa-solid fa-user" style="font-size: 20px"></i><span>Client</span></a>
+              </li>
+        
+              <li class="dropdown mt-5">
+                <a href="#" class="nav-link"><i class="fa-solid fa-users" style="font-size: 20px"></i><span>Staff admin</span></a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="nav-link"><i class="fa-solid fa-gear" style="font-size: 20px"></i><span>Setting</span></a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="nav-link"><i class="fa-solid fa-right-from-bracket" style="font-size: 20px"></i><span>Logout</span></a>
+              </li>
+              <!-- <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="users"></i><span>Users</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="{{url('admin/index')}}">All Users</a></li>
+                  <li><a class="nav-link" href="{{url('admin/create')}}">Add User</a></li>
+                </ul>
+              </li> -->
+              
+            </ul>
+          </aside>
+      </div>
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="d-flex justify-content-between">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="service.html">Create Order</a></li>
+              <li class="breadcrumb-item"><a href="order-service.html">Manage Orders</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Update Order</li>
+            </ol>
+          </nav>
+            <div class="buttons">
+                <a href="#" class="btn btn-icon icon-left btn-primary"><i class="far fa-edit"></i> Edit</a>
+                <a href="#" class="btn btn-icon icon-left btn-success"><img src="assets/img/succ.png" alt=""> Approved</a>
+                <a href="#" class="btn btn-icon icon-left btn-warning"><img src="assets/img/pend.png" alt="">
+                  Pending</a>
+                  <a href="#" class="btn btn-icon icon-left btn-danger"> <img src="assets/img/x.png" alt=""> Cancelled</a>
+                  <a href="#" class="btn btn-icon icon-left btn-info"><img src="assets/img/exp.png" alt=""> Export</a>
+                <a href="#" class="btn btn-icon icon-left btn-secondary"><img src="assets/img/down.png" alt=""> Print</a>
+                
+              </div>
+          </div>
+          
+          <hr>
+          
+          <div class="tab-head mt-5">
+            <h4>Order Detail</h4>
+          <small>Order ID automatically generate,Start with SLT0000001</small>
+          </div>
+          <form action="">
+              <div class="row mt-4">
+              <div class="form-group col-md-4">
+                <label for="">Order ID</label> 
+                <input type="text" placeholder="SLT0000001" class="form-control" style="background-color: #EAEAEA;
+                ">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="">Date</label> 
+                <input type="date" class="form-control" style="background-color: #EAEAEA;
+                ">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="">Destination</label> 
+                <select name="" id="" class="form-control" style="background-color: #EAEAEA;
+                ">
+                  <option>-- Select City --</option>
+                  <option>Berlin</option>
+                  <option>Hamburg</option>
+                  <option>Stuttgart</option>
+                  <option>New yourk</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="">Service detail</label> 
+                <input type="text" placeholder="Enter Service Detail" class="form-control" style="background-color: #EAEAEA;
+                ">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="">Departure</label> 
+                <input type="text" placeholder="Enter Desparture" class="form-control" style="background-color: #EAEAEA;
+                ">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="">Arrival</label> 
+                <input type="text" placeholder="Enter Arrival" class="form-control" style="background-color: #EAEAEA;
+                ">
+              </div>
+              
+                <div class="form-group col-md-4">
+                  <label for="">Car Seat</label> 
+                  <input type="text" placeholder="Enter Car Seat" class="form-control" style="background-color: #EAEAEA;
+                  ">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="">Pickup time</label> 
+                  <input type="text" placeholder="Enter Pickup time" class="form-control" style="background-color: #EAEAEA;
+                  ">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="">N.O.F</label> 
+                  <input type="text" placeholder="Enter NOF" class="form-control" style="background-color: #EAEAEA;
+                  ">
+                </div>
+            </div>
+            </form>
+            <hr>
+          
+            <div class="tab-head mt-3">
+              <h4>Suppliers</h4>
+            </div>
+            <form action="">
+                <div class="row mt-2">
+                <div class="form-group col-md-4">
+                  <label for="">Turkish Company</label> 
+                  <input type="text" placeholder="Enter Company" class="form-control" style="background-color: #EAEAEA;
+                  ">
+                </div>
+                
+                <div class="form-group col-md-4">
+                  <label for="">Amount</label> 
+                  <input type="text" placeholder="Enter Amount" class="form-control" style="background-color: #EAEAEA;
+                  ">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="">Payment Status</label> 
+                  <input type="text" placeholder="Enter Payment Status" class="form-control" style="background-color: #EAEAEA;
+                  ">
+                </div>
+              </div>
+              </form>
+              <hr>
+          
+            <form action="">
+              <label for="" style="font-size: 17px; font-weight:700">Provider</label>
+              <div class="row mt-4">
+             
+              <div class="form-group col-md-4">
+                <label for="">Source</label> 
+                <input type="text" placeholder="Enter Source" class="form-control" style="background-color: #EAEAEA;
+                ">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="">Amount</label> 
+                <input type="text" placeholder="Enter Amount" class="form-control" style="background-color: #EAEAEA;
+                ">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="">Payment Status</label> 
+                <input type="text" placeholder="Enter Payment Status" class="form-control" style="background-color: #EAEAEA;
+                ">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="">Staff</label> 
+                <input type="text" placeholder="Enter Staff" class="form-control" style="background-color: #EAEAEA;
+                ">
+              </div>
+              
+            </div>
+            </form>
+          
+            <hr>
+          
+            <form action="">
+              <label for="" style="font-size: 17px; font-weight:700">Client Detail</label>
+              <div class="row mt-4">
+             
+              <div class="form-group col-md-4">
+                <label for="">Name</label> 
+                <input type="text" placeholder="Enter Name" class="form-control" style="background-color: #EAEAEA;
+                ">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="">Wechat ID</label> 
+                <input type="text" placeholder="Enter Wechat ID" class="form-control" style="background-color: #EAEAEA;
+                ">
+              </div>
+              
+              <div class="form-group col-md-4">
+                <label for="">Phone Number</label> 
+                <input type="text" placeholder="Enter Phone Number" class="form-control" style="background-color: #EAEAEA;
+                ">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="">Passport ID</label> 
+                <input type="text" placeholder="Enter Passport ID" class="form-control" style="background-color: #EAEAEA;
+                ">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="">E-mail</label> 
+                <input type="email" placeholder="Enter Email Please" class="form-control" style="background-color: #EAEAEA;
+                ">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="">Order Creater</label> 
+                <input type="email" placeholder="Enter Order Creater" class="form-control" style="background-color: #EAEAEA;
+                ">
+              </div>
+              <div class="form-group col-md-12">
+                <label for="">Extra Information</label> 
+                <textarea id="editor"></textarea>
+              </div>
+            </div>
+            <div class="text-center">
+              <a href="service-filter.html" class="btn btn-info" style="background-color: #4F46E5; padding:6px 30px; font-weight:800;">Update</a>
+            </div>
+            </form>
+              
+            </section>
+          <div class="settingSidebar">
+            <a href="javascript:void(0)" class="settingPanelToggle"> <i class="fa fa-spin fa-cog"></i>
+            </a>
+            <div class="settingSidebar-body ps-container ps-theme-default">
+              <div class=" fade show active">
+                <div class="setting-panel-header">Setting Panel
+                </div>
+                <div class="p-15 border-bottom">
+                  <h6 class="font-medium m-b-10">Select Layout</h6>
+                  <div class="selectgroup layout-color w-50">
+                    <label class="selectgroup-item">
+                      <input type="radio" name="value" value="1" class="selectgroup-input-radio select-layout" checked>
+                      <span class="selectgroup-button">Light</span>
+                    </label>
+                    <label class="selectgroup-item">
+                      <input type="radio" name="value" value="2" class="selectgroup-input-radio select-layout">
+                      <span class="selectgroup-button">Dark</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="p-15 border-bottom">
+                  <h6 class="font-medium m-b-10">Sidebar Color</h6>
+                  <div class="selectgroup selectgroup-pills sidebar-color">
+                    <label class="selectgroup-item">
+                      <input type="radio" name="icon-input" value="1" class="selectgroup-input select-sidebar">
+                      <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
+                        data-original-title="Light Sidebar"><i class="fas fa-sun"></i></span>
+                    </label>
+                    <label class="selectgroup-item">
+                      <input type="radio" name="icon-input" value="2" class="selectgroup-input select-sidebar" checked>
+                      <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
+                        data-original-title="Dark Sidebar"><i class="fas fa-moon"></i></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="p-15 border-bottom">
+                  <h6 class="font-medium m-b-10">Color Theme</h6>
+                  <div class="theme-setting-options">
+                    <ul class="choose-theme list-unstyled mb-0">
+                      <li title="white" class="active">
+                        <div class="white"></div>
+                      </li>
+                      <li title="cyan">
+                        <div class="cyan"></div>
+                      </li>
+                      <li title="black">
+                        <div class="black"></div>
+                      </li>
+                      <li title="purple">
+                        <div class="purple"></div>
+                      </li>
+                      <li title="orange">
+                        <div class="orange"></div>
+                      </li>
+                      <li title="green">
+                        <div class="green"></div>
+                      </li>
+                      <li title="red">
+                        <div class="red"></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="p-15 border-bottom">
+                  <div class="theme-setting-options">
+                    <label class="m-b-0">
+                      <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                        id="mini_sidebar_setting">
+                      <span class="custom-switch-indicator"></span>
+                      <span class="control-label p-l-10">Mini Sidebar</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="p-15 border-bottom">
+                  <div class="theme-setting-options">
+                    <label class="m-b-0">
+                      <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                        id="sticky_header_setting">
+                      <span class="custom-switch-indicator"></span>
+                      <span class="control-label p-l-10">Sticky Header</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="mt-4 mb-4 p-3 align-center rt-sidebar-last-ele">
+                  <a href="#" class="btn btn-icon icon-left btn-primary btn-restore-theme">
+                    <i class="fas fa-undo"></i> Restore Default
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        <div class="settingSidebar">
+          <a href="javascript:void(0)" class="settingPanelToggle"> <i class="fa fa-spin fa-cog"></i>
+          </a>
+          <div class="settingSidebar-body ps-container ps-theme-default">
+            <div class=" fade show active">
+              <div class="setting-panel-header">Setting Panel
+              </div>
+              <div class="p-15 border-bottom">
+                <h6 class="font-medium m-b-10">Select Layout</h6>
+                <div class="selectgroup layout-color w-50">
+                  <label class="selectgroup-item">
+                    <input type="radio" name="value" value="1" class="selectgroup-input-radio select-layout" checked>
+                    <span class="selectgroup-button">Light</span>
+                  </label>
+                  <label class="selectgroup-item">
+                    <input type="radio" name="value" value="2" class="selectgroup-input-radio select-layout">
+                    <span class="selectgroup-button">Dark</span>
+                  </label>
+                </div>
+              </div>
+              <div class="p-15 border-bottom">
+                <h6 class="font-medium m-b-10">Sidebar Color</h6>
+                <div class="selectgroup selectgroup-pills sidebar-color">
+                  <label class="selectgroup-item">
+                    <input type="radio" name="icon-input" value="1" class="selectgroup-input select-sidebar">
+                    <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
+                      data-original-title="Light Sidebar"><i class="fas fa-sun"></i></span>
+                  </label>
+                  <label class="selectgroup-item">
+                    <input type="radio" name="icon-input" value="2" class="selectgroup-input select-sidebar" checked>
+                    <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
+                      data-original-title="Dark Sidebar"><i class="fas fa-moon"></i></span>
+                  </label>
+                </div>
+              </div>
+              <div class="p-15 border-bottom">
+                <h6 class="font-medium m-b-10">Color Theme</h6>
+                <div class="theme-setting-options">
+                  <ul class="choose-theme list-unstyled mb-0">
+                    <li title="white" class="active">
+                      <div class="white"></div>
+                    </li>
+                    <li title="cyan">
+                      <div class="cyan"></div>
+                    </li>
+                    <li title="black">
+                      <div class="black"></div>
+                    </li>
+                    <li title="purple">
+                      <div class="purple"></div>
+                    </li>
+                    <li title="orange">
+                      <div class="orange"></div>
+                    </li>
+                    <li title="green">
+                      <div class="green"></div>
+                    </li>
+                    <li title="red">
+                      <div class="red"></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="p-15 border-bottom">
+                <div class="theme-setting-options">
+                  <label class="m-b-0">
+                    <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                      id="mini_sidebar_setting">
+                    <span class="custom-switch-indicator"></span>
+                    <span class="control-label p-l-10">Mini Sidebar</span>
+                  </label>
+                </div>
+              </div>
+              <div class="p-15 border-bottom">
+                <div class="theme-setting-options">
+                  <label class="m-b-0">
+                    <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                      id="sticky_header_setting">
+                    <span class="custom-switch-indicator"></span>
+                    <span class="control-label p-l-10">Sticky Header</span>
+                  </label>
+                </div>
+              </div>
+              <div class="mt-4 mb-4 p-3 align-center rt-sidebar-last-ele">
+                <a href="#" class="btn btn-icon icon-left btn-primary btn-restore-theme">
+                  <i class="fas fa-undo"></i> Restore Default
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <!-- General JS Scripts -->
+  <script src="assets/js/app.min.js"></script>
+  <!-- JS Libraies -->
+  <script src="assets/bundles/apexcharts/apexcharts.min.js"></script>
+  <!-- Page Specific JS File -->
+  <script src="assets/js/page/index.js"></script>
+  <!-- Template JS File -->
+  <script src="assets/js/scripts.js"></script>
+  <!-- Custom JS File -->
+  <script src="assets/js/custom.js"></script>
+
+  <script type="text/javascript" src='https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js'></script>
+  <script>
+  tinymce.init({
+      selector: "#editor"
+  });
+  </script>
+
+
+</body>
+
+
+<!-- index.html  21 Nov 2019 03:47:04 GMT -->
+</html>
